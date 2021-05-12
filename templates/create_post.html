@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post"> {% csrf_token %}
+        {{ form.as_p }}
+       Limits: <select name="limits">
+            <option value="Public">Public</option>
+            <option value="Private">Private</option>
+            <option value="Hidden">Hidden</option>
+        </select>
+        <br><br>
+        <input type="submit" value="save"/>
+    </form>
+{% endblock %}s

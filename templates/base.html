@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Some title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+    </header>
+    <nav>
+        <ol>
+            <li>Strona główna</li>
+            <li>Moja Tablica</li>
+            <li>Wyszukiwarka</li>
+        </ol>
+    </nav>
+    <section>
+        {% block content %}
+        replace me
+        {% endblock %}
+    </section>
+    <footer></footer>
+</body>
+</html>

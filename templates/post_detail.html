@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>{{ post.title }}</a> </h2>
+    <p> Autor: {{ post.user }} </p>
+    <p> {{ post.contents}} </p>
+    <img src="{{ post.image.url }}">
+{% for instance in coments_list %}
+    <p>Autor komentarza:{{instance.user}}</p>
+<br><br>
+    <p>Tresc komentarza: {{instance.contents}}</p>
+{% endfor %}
+
+{% endblock %}
